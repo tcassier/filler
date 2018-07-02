@@ -6,7 +6,7 @@
 #    By: tcassier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/14 03:34:08 by tcassier          #+#    #+#              #
-#    Updated: 2018/06/17 19:22:14 by tcassier         ###   ########.fr        #
+#    Updated: 2018/07/02 16:49:41 by tcassier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,5 +59,6 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@make -C $(LFT_PATH) fclean
 
 re: fclean all

@@ -6,7 +6,7 @@
 /*   By: tcassier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 18:01:17 by tcassier          #+#    #+#             */
-/*   Updated: 2018/06/17 18:55:40 by tcassier         ###   ########.fr       */
+/*   Updated: 2018/07/02 16:44:16 by tcassier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static void	fr_get_coord_enemy(t_filler *data, int *x, int *y)
 		while (*y < data->map_y)
 		{
 			if (data->prev_map[*x][*y] == '.' && data->map[*x][*y]
-			== data->enemy)
-				break ;
+			!= '.' && data->map[*x][*y] != data->player)
+				return ;
 			(*y)++;
 		}
 		(*x)++;
